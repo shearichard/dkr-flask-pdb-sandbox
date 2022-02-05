@@ -1,6 +1,6 @@
 # dkr-flask-pdb-sandbox
 ## Overview
-Test project to make use of pdb from within a dockerised Flask app.
+Test project to make use of [pdb](https://docs.python.org/3/library/pdb.html) from within a dockerised Flask app.
 
 
 ## Virtual Environment Notes
@@ -10,13 +10,15 @@ This is a Pipenv project so use the normal pipenv commands to control the virtua
 ## Docker Cheat Sheet 
 
 ```
-(dkr-flask-pdb-sandbox) rshea@mayari:~/src/dkr-flask-pdb-sandbox/flskapp$ docker container ls --all
+$ docker build -t dkr-flsk-pdb-sbox .;docker image ls;
 ...
-(dkr-flask-pdb-sandbox) rshea@mayari:~/src/dkr-flask-pdb-sandbox/flskapp$ docker rm abdd314c875c
+$ docker container ls --all
 ...
-(dkr-flask-pdb-sandbox) rshea@mayari:~/src/dkr-flask-pdb-sandbox/flskapp$ docker container ls --all
+$ docker rm abdd314c875c
 ...
-(dkr-flask-pdb-sandbox) rshea@mayari:~/src/dkr-flask-pdb-sandbox/flskapp$ docker run -p 5000:5000 -d dkr-flsk-pdb-sbox
+$ docker container ls --all
 ...
-(dkr-flask-pdb-sandbox) rshea@mayari:~/src/dkr-flask-pdb-sandbox/flskapp$ docker container ls --all
+$ docker run -p 5000:5000 -d dkr-flsk-pdb-sbox
+...
+$ docker container ls --all
 ```
