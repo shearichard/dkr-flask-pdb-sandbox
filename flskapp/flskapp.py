@@ -1,5 +1,7 @@
 from flask import Flask
 
+USE_PDB=True
+
 app = Flask(__name__)
 
 def a_function_to_step_into(n, m):
@@ -11,7 +13,8 @@ def a_function_to_step_into(n, m):
 def hello_pdb():
     somedic = {"reason": 'only here for pdb to look at'}
     somedic['return_value'] = a_function_to_step_into(5,6)
-    import pdb;pdb.set_trace()
+    if USE_PDB: 
+        import pdb;pdb.set_trace()
     return "<h1>flaskapp</h1><h2>Hello, PDB!</h2><p><a href='/'>Home page</a>.</p>"
 
 @app.route("/")
