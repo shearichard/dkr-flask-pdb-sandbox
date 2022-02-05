@@ -1,6 +1,6 @@
 # dkr-flask-pdb-sandbox
 ## Overview
-Test project to make use of [pdb](https://docs.python.org/3/library/pdb.html) from within a dockerised Flask app.
+Test project to make use of [Python Debugger (pdb)](https://docs.python.org/3/library/pdb.html) from within a dockerised Flask app.
 
 
 ## Virtual Environment Notes
