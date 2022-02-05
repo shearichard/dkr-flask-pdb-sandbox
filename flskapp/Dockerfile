@@ -1,15 +1,15 @@
-FROM python:3.8
+FROM python
 
 # Create app directory
 WORKDIR /app
 
 # Install app dependencies
-COPY ./requirements.txt ./
+COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
 # Bundle app source
-COPY dofl /app
+COPY flskapp /app
 
 EXPOSE 5000
 CMD [ "python", "dofl.py" ]
