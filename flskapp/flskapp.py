@@ -17,3 +17,7 @@ def hello_pdb():
 @app.route("/")
 def hello_world():
     return '''<h1>flaskapp</h1><h2>Hello, World!</h2><p>If you want to try debugging <a href='/hellopdb'>click here</a>.</p>'''
+
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')

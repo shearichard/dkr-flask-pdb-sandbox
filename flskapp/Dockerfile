@@ -9,7 +9,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Bundle app source
-COPY flskapp /app
+COPY ./* /app/
 
 EXPOSE 5000
-CMD [ "python", "dofl.py" ]
+CMD [ "python", "flskapp.py" ]
