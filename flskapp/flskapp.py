@@ -1,4 +1,5 @@
 from flask import Flask
+from datetime import datetime
 
 USE_PDB=True
 
@@ -19,8 +20,10 @@ def hello_pdb():
 
 @app.route("/")
 def hello_world():
-    return '''<h1>flaskapp</h1><h2>v1.0.0</h2><p>If you want to try debugging <a href='/hellopdb'>click here</a>.</p>'''
+    d=datetime.now()
+    fmtd_dttime = d.strftime('%Y%m%dT%H%M%S') #'outputs something like : 20120115T143929'
+    return '''<h1>flaskapp</h1><h2>v1.0.0</h2><p>Page served at : ''' + fmtd_dttime + '''</p><p>If you want to try debugging <a href='/hellopdb'>click here</a>.</p>'''
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=8787)
