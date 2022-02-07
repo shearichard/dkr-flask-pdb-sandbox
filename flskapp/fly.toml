@@ -1,6 +1,6 @@
-# fly.toml file generated for dkr-flask-pdb-sandbox on 2022-02-06T19:20:56+13:00
+# fly.toml file generated for d-f-p-s-0 on 2022-02-07T17:17:59+13:00
 
-app = "dkr-flask-pdb-sandbox"
+app = "d-f-p-s-0"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
